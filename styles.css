@@ -1,1 +1,27 @@
-/*  your css code here. If applicable */
+
+#container {
+    margin: 20px;
+    position: relative;
+}
+
+#container::before,
+#container::after {
+    content: "Special Text";
+    color: #f00;
+    font-size: 20px;
+    position: absolute;
+}
+
+#container::before {
+    content: "Special Text Before";
+    left: -30px; /* Adjust as needed for positioning before the container */
+    top: 50%; /* Adjust to vertically center the text */
+    transform: translateY(-50%);
+}
+
+#container::after {
+    content: "Special Text After";
+    right: -30px; /* Adjust as needed for positioning after the container */
+    top: 50%; /* Adjust to vertically center the text */
+    transform: translateY(-50%);
+}
