@@ -12,6 +12,7 @@
     display:inline-block; /* Make it a block-level element to stack above the box */
      /* Background color for the pseudo-element */
     color: #f00; /* Text color for the pseudo-element */
+	font-size:20px;
 }
 
 #container::after {
@@ -19,4 +20,5 @@
     display:inline-block; /* Make it a block-level element to stack below the box */
     /* Background color for the pseudo-element */
     color: #f00; /* Text color for the pseudo-element */
+	font-size:20px
 }
