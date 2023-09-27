@@ -1,27 +1,22 @@
 
 #container {
-    margin: 20px;
-    position: relative;
+    margin:20px;
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
 }
 
-#container::before,
-#container::after {
-    content: "Special Text";
-    color: #f00;
-    font-size: 20px;
-    position: absolute;
-}
+
+
 
 #container::before {
-    content: "Special Text Before";
-    left: -30px; /* Adjust as needed for positioning before the container */
-    top: 50%; /* Adjust to vertically center the text */
-    transform: translateY(-50%);
+    content: "Before Element"; /* Content to insert before the box */
+    display:inline-block; /* Make it a block-level element to stack above the box */
+     /* Background color for the pseudo-element */
+    color: #f00; /* Text color for the pseudo-element */
 }
 
 #container::after {
-    content: "Special Text After";
-    right: -30px; /* Adjust as needed for positioning after the container */
-    top: 50%; /* Adjust to vertically center the text */
-    transform: translateY(-50%);
+    content: "After Element";
+    display:inline-block; /* Make it a block-level element to stack below the box */
+    /* Background color for the pseudo-element */
+    color: #f00; /* Text color for the pseudo-element */
 }
